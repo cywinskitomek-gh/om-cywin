@@ -1,7 +1,7 @@
 # om-cywin
 
-An OpenMusic 8 library by Tomasz Cywiński — composer, arranger and orchestrator from Toruń, Poland.
-Code written with Claude (Anthropic).
+An OpenMusic 8 library by Tomasz Cywiński and Claude (Anthropic).
+Tomasz Cywiński is a composer, arranger and orchestrator from Toruń, Poland.
 
 The library collects the tools used in the author's algorithmic composition work, most notably the
 **tension** harmonic system behind the cycle *Alfabet Toruński*
@@ -35,6 +35,11 @@ Note names follow the OpenMusic convention: C3 = MIDI 60 = 6000 midicents.
 
 Every box has an English description; the reference pages are in `reference-pages/index.html`.
 The icons (`resources/icon/9100–9122`, without 9115) are the library's own set, one per menu group; their SVG sources are in `extras/icons-svg/`.
+
+## Authors
+
+- Tomasz Cywiński — concept, the tension system, code
+- Claude (Anthropic) — code, co-written with Tomasz Cywiński
 
 ## Installation
 
