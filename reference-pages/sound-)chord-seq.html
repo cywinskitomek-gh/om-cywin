@@ -1,0 +1,160 @@
+<html>
+<head><title>SOUND-&gt;CHORD-SEQ - om-cywin Reference Documentation</title>
+<STYLE TYPE="text/css"><!--  
+
+BODY {background-color: #EEEEEE;
+	  font-family: Verdana;
+font-size: 12;
+color : #0000000;
+}
+
+A:link {text-decoration: underline; color : 333366;}
+A:visited {text-decoration: underline; color : 333366;}
+A:active {Verdana; text-decoration: underline; color:333366;}
+A:hover {Verdana; text-decoration: underline; color: 333366;}
+
+H1 {
+ color : #333333;
+ font-size: 18;
+ font-weight: bold
+ text-align: left;
+}
+	
+H2 {
+ color : #333333;
+ font-size: 16;
+ font-weight: bold;
+}
+
+H3 {
+ color : #444444;
+ font-size: 12;
+ font-weight: bold;
+}
+
+P,UL,LI, TD {	
+ font-size: 11;
+ text-indent: 0cm;
+ text-align: justify;
+}
+.right {text-align: right ;}
+.center {text-align: center ;}
+.top {text-align: top ;}
+   --></style>
+</head>
+<body bgcolor=BBBBBB>
+<br>
+<table align=center bgcolor=FFFFFF width=87%><tr>
+<td>
+<h2>SOUND-&gt;CHORD-SEQ</h2>
+<font size=-1>[GENERIC-FUNCTION]</font><br><br>
+</td><td width=130>
+<img src=./omlogo.gif width=100><br>
+<font size=-2 align=right><a href=index.html>om-cywin<br> Function Reference</a></font>
+</td></tr>
+<tr><td colspan=2>
+<font color=882222><b>ARGUMENTS:</b></font><br>
+<table width=100% border=0>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>snd</b></font>
+</td>
+<td>sound (or om-sound-data)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>win-ms</b></font>
+</td>
+<td>window length in ms</td>
+<td>[default = 125]</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>range</b></font>
+</td>
+<td>midicent range (from to)</td>
+<td>[default = (2100 10800)]</td>
+</tr>
+<tr>
+<tr>
+<td>
+<i><b>&key</b></i><br>
+</td>
+<td colspan=3>&nbsp;</td></tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>step</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>channel</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>range-db</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>min-vel</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>dur</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>chan</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+</table>
+</tr>
+<tr><td colspan=2>
+<br><font color=882222><b>Description:</b></font><p>
+Turns a sound into a CHORD-SEQ: GOERTZEL-SONOGRAM and SONOGRAM-&gt;CHORD-SEQ in one box.<br>
+Each window of &lt;win-ms&gt; ms is one chord of the midicents of &lt;range&gt; every &lt;step&gt; (default 100).<br>
+&lt;channel&gt; nil = mean of the channels (stereo -&gt; mono, default), 0 = left, 1 = right.<br>
+&lt;range-db&gt; dynamic range: the loudest component of the whole sound = 127, &lt;range-db&gt; dB below = 0 (default 40).<br>
+&lt;min-vel&gt; notes with a lower velocity are skipped (default 1, i.e. only zeros);<br>
+   for real recordings raise it (e.g. 64 = -20 dB with range-db 40), because leakage gives dense chords.<br>
+&lt;dur&gt; note length in ms (nil = the distance between windows), &lt;chan&gt; MIDI channel.<br>
+</p><br><br></td></tr>
+<td class=center colspan=2>
+<center><font size=-2>Auto doc generation by OpenMusic 8.0 &copy 2026 IRCAM</font></center>
+</td></tr></table>
+</body></html>

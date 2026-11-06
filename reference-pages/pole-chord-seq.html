@@ -1,0 +1,286 @@
+<html>
+<head><title>POLE-CHORD-SEQ - om-cywin Reference Documentation</title>
+<STYLE TYPE="text/css"><!--  
+
+BODY {background-color: #EEEEEE;
+	  font-family: Verdana;
+font-size: 12;
+color : #0000000;
+}
+
+A:link {text-decoration: underline; color : 333366;}
+A:visited {text-decoration: underline; color : 333366;}
+A:active {Verdana; text-decoration: underline; color:333366;}
+A:hover {Verdana; text-decoration: underline; color: 333366;}
+
+H1 {
+ color : #333333;
+ font-size: 18;
+ font-weight: bold
+ text-align: left;
+}
+	
+H2 {
+ color : #333333;
+ font-size: 16;
+ font-weight: bold;
+}
+
+H3 {
+ color : #444444;
+ font-size: 12;
+ font-weight: bold;
+}
+
+P,UL,LI, TD {	
+ font-size: 11;
+ text-indent: 0cm;
+ text-align: justify;
+}
+.right {text-align: right ;}
+.center {text-align: center ;}
+.top {text-align: top ;}
+   --></style>
+</head>
+<body bgcolor=BBBBBB>
+<br>
+<table align=center bgcolor=FFFFFF width=87%><tr>
+<td>
+<h2>POLE-CHORD-SEQ</h2>
+<font size=-1>[GENERIC-FUNCTION]</font><br><br>
+</td><td width=130>
+<img src=./omlogo.gif width=100><br>
+<font size=-2 align=right><a href=index.html>om-cywin<br> Function Reference</a></font>
+</td></tr>
+<tr><td colspan=2>
+<font color=882222><b>ARGUMENTS:</b></font><br>
+<table width=100% border=0>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>letter</b></font>
+</td>
+<td>letter</td>
+<td>[default = "A"]</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>n-chords</b></font>
+</td>
+<td>number of chords</td>
+<td>[default = 16]</td>
+</tr>
+<tr>
+<tr>
+<td>
+<i><b>&key</b></i><br>
+</td>
+<td colspan=3>&nbsp;</td></tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>n</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>center</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>sigma</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>pole-weight</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>width</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>offset</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>offset-sigma</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>weights</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>band</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>dur</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>vel</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>lo</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>hi</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>direction</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>model</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>shift</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>toler</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>n-harm</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>range</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+</table>
+</tr>
+<tr><td colspan=2>
+<br><font color=882222><b>Description:</b></font><p>
+A sequence of &lt;n-chords&gt; chords of a letter (like pole-chord in a loop), every &lt;dur&gt; ms.<br>
+Each of the parameters &lt;n&gt; &lt;center&gt; &lt;sigma&gt; &lt;pole-weight&gt; &lt;width&gt; &lt;offset&gt; can be:<br>
+a number (constant), a list (one per chord, the last value repeated)<br>
+or a BPF (drawn; sampled evenly from the first to the last x).<br>
+&lt;center&gt;, &lt;sigma&gt; in midicents. &lt;n&gt; is rounded, at least 1.<br>
+&lt;pole-weight&gt; - weight of pole 1 (0..1, pole 2 gets 1 - weight);<br>
+nil = fixed weights 1 and 0.7. A list of pairs can also be given, e.g. ((0.8 0.2) (0.7 0.3)).<br>
+&lt;offset&gt; - choice of the tension in the window pole +/- width: nil or :uniform (default) = random (uniform),<br>
+:gauss = random from a normal distribution around the pole (sigma = &lt;offset-sigma&gt; * width; &lt;offset-sigma&gt;<br>
+a number, list or BPF, default 0.5 - smaller = closer to the pole),<br>
+-1..1 = position in the window (-1 bottom, 0 pole, 1 top), e.g. a BPF drawn in -1..1.<br>
+&lt;vel&gt; - velocity: a number, list or BPF (like center), rounded to 1..127.<br>
+&lt;weights&gt; :normal (Gaussian with center and sigma), :pascal or a list of weights - as in gauss-pick-pitches.<br>
+Output 2: for bpc-lib - red center, orange band limits (center +/- band*sigma),<br>
+blue notes. &lt;band&gt; as in gauss-pick-pitches (default 1).<br>
+Output 3: a list (center sigma n notes-in-chord (band from to) (ambitus from to) weights tension pole offset)<br>
+for every chord (n - requested, notes-in-chord - actual, may be fewer because of the band &lt;band&gt;;<br>
+band - center +/- band*sigma, nil when band = nil; ambitus - the actual extreme notes of the chord;<br>
+offset - tension minus pole, in steps).<br>
+Output 6 (optional): chord-seq of the full matrix chords (the whole &lt;range&gt;, without note selection<br>
+and without band) for the same drawn tensions, in the same rhythm.<br>
+Output 5 (optional): band limits of the whole run (from to) in midicents - the lowest<br>
+value of center - band*sigma and the highest center + band*sigma; for preview in CHORD.<br>
+Output 4 (optional - add with the &gt; key, remove with &lt;): a list of 6 BPFs with the values used for the consecutive chords (x = chord number 0, 1, 2...):<br>
+weight of pole 1 (share, 0..1), center, sigma, n, offset (steps), velocity - preview of the curves after reduction.<br>
+</p><br><br></td></tr>
+<td class=center colspan=2>
+<center><font size=-2>Auto doc generation by OpenMusic 8.0 &copy 2026 IRCAM</font></center>
+</td></tr></table>
+</body></html>

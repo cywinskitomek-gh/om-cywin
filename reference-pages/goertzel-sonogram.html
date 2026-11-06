@@ -1,0 +1,127 @@
+<html>
+<head><title>GOERTZEL-SONOGRAM - om-cywin Reference Documentation</title>
+<STYLE TYPE="text/css"><!--  
+
+BODY {background-color: #EEEEEE;
+	  font-family: Verdana;
+font-size: 12;
+color : #0000000;
+}
+
+A:link {text-decoration: underline; color : 333366;}
+A:visited {text-decoration: underline; color : 333366;}
+A:active {Verdana; text-decoration: underline; color:333366;}
+A:hover {Verdana; text-decoration: underline; color: 333366;}
+
+H1 {
+ color : #333333;
+ font-size: 18;
+ font-weight: bold
+ text-align: left;
+}
+	
+H2 {
+ color : #333333;
+ font-size: 16;
+ font-weight: bold;
+}
+
+H3 {
+ color : #444444;
+ font-size: 12;
+ font-weight: bold;
+}
+
+P,UL,LI, TD {	
+ font-size: 11;
+ text-indent: 0cm;
+ text-align: justify;
+}
+.right {text-align: right ;}
+.center {text-align: center ;}
+.top {text-align: top ;}
+   --></style>
+</head>
+<body bgcolor=BBBBBB>
+<br>
+<table align=center bgcolor=FFFFFF width=87%><tr>
+<td>
+<h2>GOERTZEL-SONOGRAM</h2>
+<font size=-1>[GENERIC-FUNCTION]</font><br><br>
+</td><td width=130>
+<img src=./omlogo.gif width=100><br>
+<font size=-2 align=right><a href=index.html>om-cywin<br> Function Reference</a></font>
+</td></tr>
+<tr><td colspan=2>
+<font color=882222><b>ARGUMENTS:</b></font><br>
+<table width=100% border=0>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>snd</b></font>
+</td>
+<td>sound (or om-sound-data)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>win-ms</b></font>
+</td>
+<td>window length in ms</td>
+<td>[default = 125]</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>range</b></font>
+</td>
+<td>midicent range (from to)</td>
+<td>[default = (2100 10800)]</td>
+</tr>
+<tr>
+<tr>
+<td>
+<i><b>&key</b></i><br>
+</td>
+<td colspan=3>&nbsp;</td></tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>step</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>channel</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+</table>
+</tr>
+<tr><td colspan=2>
+<br><font color=882222><b>Description:</b></font><p>
+Cuts the sound into consecutive windows of &lt;win-ms&gt; milliseconds and in each window<br>
+computes, with the Goertzel algorithm, the amplitude for the midicents of &lt;range&gt; every &lt;step&gt; (default 100).<br>
+Outputs:<br>
+ 1. list of windows; each window is a list of amplitudes in the order of the midicents of output 2,<br>
+ 2. list of midicents,<br>
+ 3. window onsets in ms.<br>
+The last, shorter window is computed too (the amplitude does not depend on its length).<br>
+&lt;channel&gt; nil = mean of the channels (stereo -&gt; mono, default), 0 = left, 1 = right, etc.<br>
+Note: the resolution is about 1000/win-ms Hz - at 125 ms about 8 Hz, so in the low register<br>
+(below about 140 Hz) neighbouring semitones blend.<br>
+</p><br><br></td></tr>
+<td class=center colspan=2>
+<center><font size=-2>Auto doc generation by OpenMusic 8.0 &copy 2026 IRCAM</font></center>
+</td></tr></table>
+</body></html>

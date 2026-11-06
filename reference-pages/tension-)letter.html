@@ -1,0 +1,166 @@
+<html>
+<head><title>TENSION-&gt;LETTER - om-cywin Reference Documentation</title>
+<STYLE TYPE="text/css"><!--  
+
+BODY {background-color: #EEEEEE;
+	  font-family: Verdana;
+font-size: 12;
+color : #0000000;
+}
+
+A:link {text-decoration: underline; color : 333366;}
+A:visited {text-decoration: underline; color : 333366;}
+A:active {Verdana; text-decoration: underline; color:333366;}
+A:hover {Verdana; text-decoration: underline; color: 333366;}
+
+H1 {
+ color : #333333;
+ font-size: 18;
+ font-weight: bold
+ text-align: left;
+}
+	
+H2 {
+ color : #333333;
+ font-size: 16;
+ font-weight: bold;
+}
+
+H3 {
+ color : #444444;
+ font-size: 12;
+ font-weight: bold;
+}
+
+P,UL,LI, TD {	
+ font-size: 11;
+ text-indent: 0cm;
+ text-align: justify;
+}
+.right {text-align: right ;}
+.center {text-align: center ;}
+.top {text-align: top ;}
+   --></style>
+</head>
+<body bgcolor=BBBBBB>
+<br>
+<table align=center bgcolor=FFFFFF width=87%><tr>
+<td>
+<h2>TENSION-&gt;LETTER</h2>
+<font size=-1>[GENERIC-FUNCTION]</font><br><br>
+</td><td width=130>
+<img src=./omlogo.gif width=100><br>
+<font size=-2 align=right><a href=index.html>om-cywin<br> Function Reference</a></font>
+</td></tr>
+<tr><td colspan=2>
+<font color=882222><b>ARGUMENTS:</b></font><br>
+<table width=100% border=0>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>tension</b></font>
+</td>
+<td>tension (a number or a list)</td>
+<td>[default = 113]</td>
+</tr>
+<tr>
+<tr>
+<td>
+<i><b>&key</b></i><br>
+</td>
+<td colspan=3>&nbsp;</td></tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>lo</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>hi</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>direction</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>model</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>needle</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>turn</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>align-hue</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>shift</b></font>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+</table>
+</tr>
+<tr><td colspan=2>
+<br><font color=882222><b>Description:</b></font><p>
+Inverse of LETTER-TENSION-POLES: for a tension gives the letter of the Alphabet on the wheel &lt;lo&gt;..&lt;hi&gt;.<br>
+The tension is always first moved into the alphabet range &lt;lo&gt;..&lt;hi&gt; (default 113..244):<br>
+t' = lo + ((t - lo) mod n), n = hi - lo + 1 = 132; e.g. 250 -&gt; 118, 60 -&gt; 192 (output 5).<br>
+Output 1: the letter whose pole 1 (arrowhead, letter hue) lies nearest the tension,<br>
+output 2: the offset tension - pole 1 of this letter (for 113..244 from -3 to +2; exactly<br>
+halfway between letters the higher letter wins, with offset -3),<br>
+output 3: the letter whose pole 2 lies nearest (on the wheel: the opposite letter),<br>
+output 4: the tension hue (TENSION-HUE).<br>
+E.g. for 113..244: 113 -&gt; A 0 (pole 2 of letter L), 179 -&gt; L 0 (pole 2 of letter A), 121 -&gt; B +2.<br>
+On the wheel (:circle, &lt;align-hue&gt;) the distance is measured around the wheel (244 -&gt; A -1); with :interleave and :helix directly<br>
+(after the move).<br>
+Other keys as in LETTER-TENSION-POLES (&lt;shift&gt; default *spiral-shift*).<br>
+For a list of tensions every output is a list.<br>
+</p><br><br></td></tr>
+<td class=center colspan=2>
+<center><font size=-2>Auto doc generation by OpenMusic 8.0 &copy 2026 IRCAM</font></center>
+</td></tr></table>
+</body></html>

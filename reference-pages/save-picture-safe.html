@@ -1,0 +1,129 @@
+<html>
+<head><title>SAVE-PICTURE-SAFE - om-cywin Reference Documentation</title>
+<STYLE TYPE="text/css"><!--  
+
+BODY {background-color: #EEEEEE;
+	  font-family: Verdana;
+font-size: 12;
+color : #0000000;
+}
+
+A:link {text-decoration: underline; color : 333366;}
+A:visited {text-decoration: underline; color : 333366;}
+A:active {Verdana; text-decoration: underline; color:333366;}
+A:hover {Verdana; text-decoration: underline; color: 333366;}
+
+H1 {
+ color : #333333;
+ font-size: 18;
+ font-weight: bold
+ text-align: left;
+}
+	
+H2 {
+ color : #333333;
+ font-size: 16;
+ font-weight: bold;
+}
+
+H3 {
+ color : #444444;
+ font-size: 12;
+ font-weight: bold;
+}
+
+P,UL,LI, TD {	
+ font-size: 11;
+ text-indent: 0cm;
+ text-align: justify;
+}
+.right {text-align: right ;}
+.center {text-align: center ;}
+.top {text-align: top ;}
+   --></style>
+</head>
+<body bgcolor=BBBBBB>
+<br>
+<table align=center bgcolor=FFFFFF width=87%><tr>
+<td>
+<h2>SAVE-PICTURE-SAFE</h2>
+<font size=-1>[GENERIC-FUNCTION]</font><br><br>
+</td><td width=130>
+<img src=./omlogo.gif width=100><br>
+<font size=-2 align=right><a href=index.html>om-cywin<br> Function Reference</a></font>
+</td></tr>
+<tr><td colspan=2>
+<font color=882222><b>ARGUMENTS:</b></font><br>
+<table width=100% border=0>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>self</b></font>
+</td>
+<td>a PICTURE object</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td>
+<i><b>&optional</b></i><br>
+</td>
+<td colspan=3>&nbsp;</td></tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>path</b></font>
+</td>
+<td>file path</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>with-graphics</b></font>
+</td>
+<td>t = with graphics (3rd input of PICTURE), nil = background only</td>
+<td>[default = t]</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>size</b></font>
+</td>
+<td>size (om-make-point w h) or nil</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<tr>
+<td width=40>&nbsp;</td>
+<td>
+- <font color=333366><b>hdr</b></font>
+</td>
+<td>nil = plain save; t / :hlg = 16-bit PNG Rec.2020 HLG; :sdr = 16-bit PNG without HDR</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+</table>
+</tr>
+<tr><td colspan=2>
+<br><font color=882222><b>Description:</b></font><p>
+Saves a PICTURE to a file - like save-picture, but without memory leaks,<br>
+so it is suitable for saving many frames in a loop.<br>
+&lt;path&gt; path; nil = file dialog.<br>
+&lt;with-graphics&gt; t = background together with vector graphics (default), nil = background only.<br>
+&lt;size&gt; image size (om-make-point width height); nil = size of the background.<br>
+&lt;hdr&gt; nil = format by extension (.png, .jpg, .bmp, otherwise TIFF), 8 bit;<br>
+      t or :hlg = 16-bit PNG tagged Rec.2020 HLG (like save-hdr-png);<br>
+      :sdr = 16-bit PNG without an HDR tag.<br>
+   With HDR a background given as a list of pixels keeps full precision (16 bit), and the graphics<br>
+   are drawn over it with anti-aliased edges. A background from a file and a size other than the<br>
+   background give 8-bit background precision. Graphic colours are HLG signal values, like the background pixels.<br>
+Returns the path of the saved file.<br>
+</p><br><br></td></tr>
+<td class=center colspan=2>
+<center><font size=-2>Auto doc generation by OpenMusic 8.0 &copy 2026 IRCAM</font></center>
+</td></tr></table>
+</body></html>
