@@ -3,11 +3,28 @@
 An OpenMusic 8 library by Tomasz Cywiński and Claude (Anthropic).
 Tomasz Cywiński is a composer, arranger and orchestrator from Toruń, Poland.
 
-The library collects the tools used in the author's algorithmic composition work, most notably the
-**tension** harmonic system behind the cycle *Alfabet Toruński*
-([cywinskitomek-gh.github.io/alfabet-torunski](https://cywinskitomek-gh.github.io/alfabet-torunski/)).
+A general-purpose toolbox for algorithmic composition in OpenMusic: note lists and sequences,
+MIDI, audio analysis, BPFs, probability, charts, colour LUTs and pictures — and a harmonic model
+based on **tension**.
 
-## The tension system in short
+## Contents
+
+| Menu | What is inside |
+|---|---|
+| LNOTES / LLNOTES / SEQUENCES | note-list tools: cut, tie, quantise, reverse, velocity, tempo |
+| MIDI / OBJECTS / INSTRUMENTS | MIDI events, score objects, harp pedals, orchestra and choir ranges |
+| AUDIO | Goertzel analysis, sonogram of a sound, simple sine generator |
+| BPF | random deviation, BPF sums, BPFs from text |
+| PROBABILITY / SERIES / CONSTANTS | weighted random choice, Pascal's triangle, series, phi and tempered ratios |
+| CHARTS | PIE-CHART and RADAR-CHART classes with SVG export |
+| COLOR-LUTS / ALFABET-LUTS / LUT-VIEW / PICTURES | .cube colour LUTs (HLG), LUT preview, 16-bit HDR PNG |
+| CONVERSIONS / TENSION-SPIRAL | tension matrix, chord ↔ tension, sound → chords, chord-seq → sound, tension wheel |
+| FILES / UTILS | helpers |
+
+Every box has an English description; the reference pages are in `reference-pages/index.html`.
+The icons (`resources/icon/9100–9122`, without 9115) are the library's own set, one per menu group; their SVG sources are in `extras/icons-svg/`.
+
+## Tension in short
 
 The tempered fifth is about 1.955 cents narrower than a pure fifth. Only octaves sound pure; every
 twelfth adds that small deviation. A chord built from more twelfths is more detuned and gets a higher
@@ -17,24 +34,10 @@ lets you go both ways:
 - chord → tension (`lmidic-to-tension`, `sound->tensions`),
 - tension → notes (`tension-to-lmidic`, `pole-chord`, `pole-chord-seq`, `tension-key-sets`).
 
+The model is used, among others, in the author's cycle *Alfabet Toruński*
+([cywinskitomek-gh.github.io/alfabet-torunski](https://cywinskitomek-gh.github.io/alfabet-torunski/)).
+
 Note names follow the OpenMusic convention: C3 = MIDI 60 = 6000 midicents.
-
-## Contents
-
-| Menu | What is inside |
-|---|---|
-| TENSION-SPIRAL | tension wheel, letter poles, chord sequences drawn from the matrix |
-| CONVERSIONS | tension matrix, chord ↔ tension, lnotes, sonogram → chords, chord-seq → sound |
-| AUDIO | Goertzel analysis, sonogram of a sound, simple sine generator |
-| LNOTES / LLNOTES / SEQUENCES | note-list tools: cut, tie, quantise, reverse, velocity, tempo |
-| MIDI / OBJECTS / INSTRUMENTS | MIDI events, score objects, harp pedals, orchestra and choir ranges |
-| BPF | random deviation, BPF sums, BPFs from the BPF Sketchbook text |
-| CHARTS | PIE-CHART and RADAR-CHART classes with SVG export |
-| ALFABET-LUTS / COLOR-LUTS / LUT-VIEW / PICTURES | .cube colour LUTs (HLG), LUT preview, 16-bit HDR PNG |
-| CONSTANTS / PROBABILITY / SERIES / FILES / UTILS | helpers |
-
-Every box has an English description; the reference pages are in `reference-pages/index.html`.
-The icons (`resources/icon/9100–9122`, without 9115) are the library's own set, one per menu group; their SVG sources are in `extras/icons-svg/`.
 
 ## Authors
 
