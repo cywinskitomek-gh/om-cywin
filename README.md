@@ -21,7 +21,12 @@ based on **tension**.
 | CONVERSIONS / TENSION-SPIRAL | tension matrix, chord ↔ tension, sound → chords, chord-seq → sound, tension wheel |
 | FILES / UTILS | helpers |
 
-Every box has an English description; the reference pages are in `reference-pages/index.html`.
+Every box has an English description; the reference pages are in `reference-pages/index.html`
+([online](https://cywinskitomek-gh.github.io/om-cywin/reference-pages/index.html)).
+
+**[Interactive map of the library](https://cywinskitomek-gh.github.io/om-cywin/map/)** — every box, what it calls
+and what calls it, with links to its reference page and source. Use it as a help page.
+
 The icons (`resources/icon/9100–9122`, without 9115) are the library's own set, one per menu group; their SVG sources are in `extras/icons-svg/`.
 
 ## Tension in short
@@ -35,7 +40,8 @@ lets you go both ways:
 - tension → notes (`tension-to-lmidic`, `pole-chord`, `pole-chord-seq`, `tension-key-sets`).
 
 The model is used, among others, in the author's cycle *Alfabet Toruński*
-([cywinskitomek-gh.github.io/alfabet-torunski](https://cywinskitomek-gh.github.io/alfabet-torunski/)).
+([tomaszcywinski.pl/alfabet](https://tomaszcywinski.pl/alfabet/)); the same page has a
+[tension calculator](https://tomaszcywinski.pl/alfabet/#kalkulator) you can try in the browser.
 
 Note names follow the OpenMusic convention: C3 = MIDI 60 = 6000 midicents.
 
