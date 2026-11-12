@@ -1,6 +1,6 @@
 # om-cywin
 
-An OpenMusic 8 library by Tomasz Cywiński and Claude (Anthropic).
+An [OpenMusic 8 (IRCAM)](https://openmusic-project.github.io) library by Tomasz Cywiński and Claude (Anthropic).
 Tomasz Cywiński is a composer, arranger and orchestrator from Toruń, Poland.
 
 A general-purpose toolbox for algorithmic composition in OpenMusic: note lists and sequences,
@@ -56,6 +56,13 @@ Note names follow the OpenMusic convention: C3 = MIDI 60 = 6000 midicents.
 2. Put it in your OpenMusic libraries folder (e.g. `~/OM/Libraries/`) or add its parent folder
    to the library search paths in OM 8 preferences.
 3. Load the library from the Libraries menu (or in a patch). The first load compiles the sources.
+
+**Compiled on load.** The loader (`om-cywin.lisp`) does not just read the Lisp sources: it calls
+`compile&load` on each file, so OpenMusic compiles it to native code (a fasl file next to the source)
+and loads that. Compiled functions evaluate much faster than interpreted ones — this matters in loops
+over long note lists, matrices and audio analysis. The compiler is built into OpenMusic, so no separate
+LispWorks licence is needed. A file is recompiled only when its source has changed; the first load
+therefore takes a little longer, later loads are quick.
 
 Requirements: OpenMusic 8.
 
